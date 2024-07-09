@@ -2,7 +2,7 @@
 
 This is a Python project for a Hebrew calendar. The project uses the Streamlit module and offers a simple website with three functions: converting Hebrew dates to Gregorian dates, converting Gregorian dates to Hebrew dates, and selecting a Hebrew date to determine the day of the week it can fall on.
 
-Additionally, the project includes a standalone Python module for Hebrew gematria. You can get the numeric value of a letter, word, or sentence, as well as get the value in letters for any number.
+Additionally, the project includes a [standalone Python module for Hebrew gematria](https://github.com/AmosElitzur1/hebrew_calendar/blob/main/imports/gimatria.py). You can get the numeric value of a letter, word, or sentence, as well as get the value in letters for any number.
 
 The project supports the Hebrew language and displays content from right to left.
 
