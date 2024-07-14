@@ -1,5 +1,5 @@
 import streamlit as st
-from imports.calendar_functions import hebrew_today, format_hebrew_date
+from imports.calendar_functions import hebrew_today
 from imports.html import page_layout
 from datetime import date
 
@@ -11,7 +11,8 @@ def main():
   st.markdown(page_layout, unsafe_allow_html=True)
   st.title("לוח עברי")
   st.header("ברוכים הבאים לאתר הלוח העברי!")
-  st.subheader(f"היום {format_hebrew_date(hebrew_today())}, {date.today().strftime('%d/%m/%Y')}")
+  st.subheader(f"היום {hebrew_today().strftime("%A %D %M %Y")}, {date.today().strftime('%d/%m/%Y')}")
+  st.markdown(f"{hebrew_today().strftime('%d/%m/%y %D %M %Y')}")
   st.markdown("")
   st.page_link("pages/המרת_תאריך_עברי_ללועזי.py", label="המרת תאריך עברי ללועזי",icon="🗓️")
   st.page_link("pages/המרת_תאריך_לועזי_לעברי.py", label="המרת תאריך לועזי לעברי",icon="🌙")

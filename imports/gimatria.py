@@ -30,10 +30,8 @@ def number_to_hebrew(num):
     if num >=i:
       word +=chr(i+1487)
       num -=i
-  if word[-2:] == "יה":
-    word = word[:-2] + "טו"
-  if word[-2:] == "יו":
-    word = word[:-2] + "טז"
+  word = word.replace("יה", "טו")
+  word = word.replace("יו", "טז")
   if len(word) > 1:
     return word[:-1]+'"'+word[-1] 
   return word 

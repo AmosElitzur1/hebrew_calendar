@@ -12,7 +12,7 @@ def main():
   st.header("בחר תאריך עברי וראה באלו ימים בשבוע הוא יכול לחול")
   day = st.selectbox("בחר יום",days_list)
   month = st.selectbox("בחר חודש", months)
-  date = hebrew_date(days_list.index(day), month)
+  date = hebrew_date(day=days_list.index(day), month_name=month, year=None, month_number=None)
   if date.validation() == 0:
     st.subheader(f"{day} {month} יכול לחול בימים {', '.join(date.possible_days())}")
   else:

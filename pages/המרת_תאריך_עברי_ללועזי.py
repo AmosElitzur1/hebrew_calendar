@@ -13,7 +13,7 @@ def main():
   st.title("לוח עברי")
   st.header("בחר תאריך עברי כדי להמיר אותו לתאריך לועזי")
   heb_year = st.text_input("הקלד שנה עברית")
-  year = hebrew_year_to_number(heb_year,deafault_value=hebrew_today()[0])
+  year = hebrew_year_to_number(heb_year,deafault_value=hebrew_today().year)
   month = st.selectbox("בחר חודש", year_months[type_year(year)][1:])        
   heb_day = st.selectbox("בחר יום",days_list[0:days_heb_month(year_months[type_year(year)].index(month),year)])
   day = days_list.index(heb_day)
@@ -26,7 +26,6 @@ def main():
   st.page_link("home_page.py", label="חזרה לדף הבית",icon="🏠")
   st.markdown("")
   st.markdown("כל הזכויות שמורות לעמוס אליצור")
-
 
 if __name__ == "__main__":
   main()    
